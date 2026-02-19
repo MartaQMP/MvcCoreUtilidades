@@ -1,0 +1,20 @@
+﻿@section style{
+    <style>
+        form{
+            width:50%;
+            margin:auto;
+            text-align: center;
+        }
+    </style>
+}
+<h1>Subir ficheros Net Core</h1>
+<hr />
+<form method="post" enctype="multipart/form-data">
+    <label class="form-label">Selecione un fichero:</label>
+    <input type="file" class="form-control" name="fichero"/>
+    <br />
+    <button class="btn btn-outline-dark">Subir fichero</button>
+</form>
+<hr />
+<h4>@ViewBag.Mensaje</h4>
+<img src="~/uploads/@ViewBag.FileName"/>
