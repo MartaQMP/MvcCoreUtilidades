@@ -1,0 +1,29 @@
+﻿@section style {
+    <style>
+        p {
+            text-align: center;
+        }
+    </style>
+}
+<h1>Memoria Personalizada</h1>
+<hr />
+<p>
+    <a asp-controller="Caching" 
+    asp-action="MemoriaPersonalizada" 
+    class="btn btn-outline-dark">Actualizar pagina</a>
+</p>
+<p>
+    <a asp-controller="Caching" 
+    asp-action="MemoriaPersonalizada" 
+    class="btn btn-outline-dark" 
+    asp-route-tiempo="15">Actualizar pagina 15 segundos</a>
+</p>
+<p>
+    <a asp-controller="Caching" 
+    asp-action="MemoriaPersonalizada" 
+    class="btn btn-outline-dark" 
+    asp-route-timepo="30">Actualizar pagina 30 segundos</a>
+</p>
+<br />
+<h4>@ViewBag.Mensaje</h4>
+<h4>@ViewBag.Fecha</h4>
