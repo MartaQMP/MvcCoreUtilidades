@@ -1,0 +1,29 @@
+﻿@section style{
+    <style>
+        form{
+            margin:auto;
+            width:70%;
+            text-align:center
+        }
+        input{
+            text-align:center
+        }
+        h4{
+            text-align:center
+        }
+    </style>
+}
+<h1>Mandar Email Net Core</h1>
+<hr />
+<form method="post">
+    <label class="form-label">To:</label>
+    <input class="form-control" name="to" type="text"></input>
+    <label class="form-label">Asunto:</label>
+    <input class="form-control" name="asunto" type="text"></input>
+    <label class="form-label">Mensaje:</label>
+    <textarea class="form-control" name="mensaje"></textarea>
+    <br />
+    <button class="btn btn-outline-dark">Enviar</button>
+</form>
+<br />
+<h4>@ViewBag.Mensaje</h4>

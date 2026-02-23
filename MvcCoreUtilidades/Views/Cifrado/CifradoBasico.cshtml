@@ -1,0 +1,25 @@
+﻿@section style{
+    <style>
+        form{
+            margin:auto;
+            width: 70%;
+            text-align:center
+        }
+        h4{
+            text-align: center
+        }
+    </style>
+}
+<h1>Cifrado basico</h1>
+<hr />
+<form method="post">
+    <label class="form-label">Contenido a cifrar:</label>
+    <input type="text" class="form-control" name="contenido"/>
+    <label class="form-label">Resultado cifrado:</label>
+    <textarea name="resultado" rows="5" class="form-control">@ViewBag.TextoCifrado</textarea>
+    <br />
+    <button class="btn btn-outline-dark" name="accion" value="cifrar">Cifrar</button>
+    <button class="btn btn-outline-dark" name="accion" value="comparar">Comparar</button>
+</form>
+<br />
+<h4>@ViewBag.Mensaje</h4>
