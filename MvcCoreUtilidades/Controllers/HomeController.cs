@@ -11,7 +11,30 @@ namespace MvcCoreUtilidades.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult LogIn()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult LogIn(string usuario)
+        {
+            HttpContext.Session.SetString("USUARIO", usuario);
+            ViewBag.Mensaje = "Usuario en el sistema";
+            return View();
+        }
+        public IActionResult LogOut()
+        {
+            HttpContext.Session.Remove("USUARIO");
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Perfil()
+        {
+            return View();
+        }
+
+        public IActionResult Pedidos()
         {
             return View();
         }
